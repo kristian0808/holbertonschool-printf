@@ -20,3 +20,28 @@ int _printf(const char *format, ...)
 	{
 		length = strlen(format);
 		if ((length != 1) || (format[0] != '%'))
+			{
+			va_start(args, format);
+			while (format[i] != '\0')
+			{
+				if (format[i] == '%')
+				{
+					func = get_function(format[i + 1]);
+					if (func)
+					{
+						count += func(args);
+						i += 2;
+						continue;
+					}
+					else if (format[i + 1] == '%')
+						i++;
+				}
+				putchar(format[i]);
+				i++;
+				count++;
+			}
+		return (count);
+		}
+	}
+	return (-1);
+}
