@@ -50,3 +50,36 @@ int print_string(va_list list)
 	}
 	return (length);
 }
+/**
+ * print_int - prints an integer
+ * @list: list of arguments from _printf
+ *
+ * Return: number of characters printed
+ */
+int print_int(va_list list)
+{
+	long int number = (long int) va_arg(list, int);
+	long int l = 1;
+	long int t = number;
+	int r = 1;
+
+	if (number < 0)
+	{
+		putchar('-');
+		r++;
+		t = t * -1;
+		number = number * -1;
+	}
+	while (t > 9)
+	{
+		t = t / 10;
+		l = l * 10;
+		r++;
+	}
+	while (l > 0)
+	{
+		putchar('0' + (number / l) % 10);
+		l = l / 10;
+	}
+	return (r);
+}
