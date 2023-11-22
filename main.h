@@ -8,7 +8,7 @@
 
 typedef struct Print
 {
-	char *type;
+	char *id;
 	int (*print)(va_list list);
 } print;
 
