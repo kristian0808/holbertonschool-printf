@@ -1,4 +1,4 @@
-ustom Printf Function in C
+# Custom Printf Function in C
 
 ## Description
 
