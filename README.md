@@ -54,6 +54,10 @@ int main(void)
 Output: The current year is 2023
 Output: This is a char : H
 ```
+
+## What happens when
+When ``` _printf("hello %s\n", "world", 1, 2, 3, 4); ``` 
+is called, the function has no way to know that more arguments were passed, so it will just ignore them. The function will not fail. The user is responsible for calling the function the right way.
 ## Files contained in this repository 
 
 | Name  | Information |
