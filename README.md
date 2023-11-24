@@ -60,7 +60,7 @@ Output: This is a char : H
 | ------------- | ------------- |
 | man_3_printf  | 	Man page of the `_printf()` function.  |
 | main.h  | Header file with the data type struct, standard libraries and custom prototypes.  |
-| printf.c  | Main printf function file. Calls other functions.  |
+| _printf.c  | Main printf function file. Calls other functions.  |
 | functions.c | Contains `char`, `string`, `decimal` and `integer` functions. |
 | get_functions.c | Function that check format and call another function it format match with character. |
 | _putchar.c | Custom putchar function. |
