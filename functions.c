@@ -61,12 +61,12 @@ int print_int(va_list list)
 	long int number = (long int) va_arg(list, int);
 	long int n_weight = 1;
 	long int tmp = number;
-	int digit = 1;
+	int digits = 1;
 
 	if (number < 0)
 	{
 		putchar('-');
-		digit++;
+		digits++;
 		tmp = tmp * -1;
 		number = number * -1;
 	}
